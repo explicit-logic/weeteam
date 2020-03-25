@@ -22,8 +22,8 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: weeteam
-            MYSQL_USER: root
-            MYSQL_PASSWORD: root
+            MYSQL_USER: weeteam
+            MYSQL_PASSWORD: weeteam
 
     php:
         build: .docker/php
