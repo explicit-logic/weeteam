@@ -37,6 +37,7 @@ class Dossier
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $name;
 
@@ -49,7 +50,7 @@ class Dossier
     /**
      * @ORM\Column(type="boolean")
      */
-    private $is_active;
+    private $is_active = true;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\DossierAddress", mappedBy="dossier")

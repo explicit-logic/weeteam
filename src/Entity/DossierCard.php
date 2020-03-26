@@ -27,12 +27,23 @@ class DossierCard
     /**
      * @ORM\Column(type="string", length=16, options={"fixed" = true})
      * @Assert\Type(type={"digit"})
+     * @Assert\Length(
+     *      min = 16,
+     *      max = 16,
+     *      exactMessage = "The card number should have exactly {{ limit }} digits.",
+     *      allowEmptyString = true
+     * )
      */
     private $number;
 
     /**
      * @ORM\Column(type="string", length=4)
      * @Assert\Type(type={"digit"})
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 4,
+     *      allowEmptyString = true
+     * )
      */
     private $cvv;
 

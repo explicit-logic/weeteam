@@ -1,0 +1,16 @@
+{% block stylesheets %}
+<style>
+.nav li.active
+{
+    background-color: aqua;
+}
+</style>
+{% endblock %}
+<ul class="nav">
+  <li{% if app.request.get('_route') == 'dossier_index' %} class="active"{% endif %}>
+    <a href="{{ path('dossier_index') }}">Cписок досье</a>
+  </li>
+  <li{% if app.request.get('_route') == 'dossier_new' %} class="active"{% endif %}>
+    <a href="{{ path('dossier_new') }}">Новый досье</a>
+  </li>
+</ul>
